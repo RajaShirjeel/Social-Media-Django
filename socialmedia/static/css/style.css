@@ -1,0 +1,41 @@
+.center-header{
+    text-align: center;
+    font-weight: bold;
+}
+
+.group-title{
+    margin-top: 20px;
+}
+
+.group-name{
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.group-members{
+    margin-top: 30px;
+}
+
+.group-post-header{
+    margin-top: 30px;
+}
+
+.group-description{
+    margin-top: 20px;
+}
+
+.no-post{
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.custm_div{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.user_posts{
+    margin-left: 100px;
+}

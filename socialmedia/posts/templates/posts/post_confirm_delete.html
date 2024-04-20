@@ -1,0 +1,10 @@
+{% extends 'posts/post_base.html' %}
+{% block prepost %}
+    <h1>Are you sure you want to delete this Post?</h1>
+    {% include 'posts/_post.html'%}
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm" class="btn btn-danger">
+        <a href="{% url 'posts:all' %}" class="btn btn-primary">Cancel</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'posts/post_base.html' %}
+{% block prepost %}
+    <div class="col-md-6">
+        {% if user.is_authenticated %}
+            <div class="card card-with-shadow custom-crd" style="margin-top: 20px;">
+                <div class="content">
+                    <h3 class>Your Groups</h3>
+                    <ul>
+                        {% for group in user_groups %}
+                            <li><a href="{% url 'groups:single' slug=group.slug %}">{{ group.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    <h3>All Groups</h3>
+                    <ul>
+                        {% for group in all_groups %}
+                            <li><a href="{% url 'groups:single' slug=group.slug %}">{{ group.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+{% block post_content %}
+    <div class="col-md-6">
+        <h2 style="margin-top: 20px; margin-bottom: 30px;">Posts:</h2>
+        <p></p>
+        {% for post in post_list %}
+            {% include 'posts/_post.html' %}
+        {% endfor %}
+    </div>
+{% endblock %}

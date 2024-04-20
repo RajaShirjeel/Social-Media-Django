@@ -1,0 +1,7 @@
+{% extends 'posts/post_base.html' %}
+{% block post_content %}
+<h1 class="center-header"><a href="{% url 'posts:user_posts' username=post.user.username %}">@{{post.user.username}}'s </a> Post</h1>
+<div class="custm_div">
+    {% include "posts/_post.html" %}
+</div>
+{% endblock %}

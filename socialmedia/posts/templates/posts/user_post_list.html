@@ -1,0 +1,14 @@
+{% extends 'posts/post_base.html' %}
+{% block prepost %}
+    <h1 class="center-header">Hello @{{user.username}}</h1>
+    <p></p>
+    <h2 class="post-header">Your Posts: </h2>
+    <p></p>
+{% endblock %}
+{% block post_content %}
+    <div class="user_posts">
+        {% for post in post_list %}
+            {% include 'posts/_post.html' %}
+        {% endfor %}
+    </div>
+{% endblock %}
